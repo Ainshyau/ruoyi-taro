@@ -1,10 +1,6 @@
 <template>
-  <view>
-    <nut-navbar
-      :title="navbarTitle"
-      :left-show="showIcon"
-      @on-click-back="onbBack"
-    />
+  <view class="h-screen bg-neutral-100">
+    <nut-navbar :title="navbarTitle" @on-click-back="onbBack" />
     <view>
       <router-view />
     </view>

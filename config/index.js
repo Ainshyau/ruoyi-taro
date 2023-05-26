@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import Components from "unplugin-vue-components/webpack";
 import NutUIResolver from "@nutui/nutui-taro/dist/resolver";
 
@@ -18,8 +19,11 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
-  plugins: ["@tarojs/plugin-html"],
+  plugins: ["@tarojs/plugin-html", "@tarojs/plugin-http"],
   defineConstants: {},
+  alias: {
+    "@": resolve(__dirname, "..", "src"),
+  },
   copy: {
     patterns: [],
     options: {},
