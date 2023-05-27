@@ -1,9 +1,9 @@
 export default defineAppConfig({
-  pages: ["pages/layout/index"],
+  pages: ['pages/layout/index'],
   window: {
-    backgroundTextStyle: "light",
-    navigationBarBackgroundColor: "#fff",
-    navigationBarTitleText: "Ruoyi",
-    navigationBarTextStyle: "black",
-  },
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#fff',
+    navigationBarTitleText: 'Ruoyi',
+    navigationBarTextStyle: 'black'
+  }
 });

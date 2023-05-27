@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export interface LoginData {
   username: string;
@@ -12,11 +12,11 @@ export interface LoginRes {
   token: string;
 }
 export function login(data: LoginData) {
-  return axios.post<LoginRes>("/login", data);
+  return axios.post<LoginRes>('/login', data);
 }
 
 export function logout() {
-  return axios.post("/logout");
+  return axios.post('/logout');
 }
 
 export interface GetInfoRes {
@@ -27,7 +27,7 @@ export interface GetInfoRes {
   user: { [key: string]: any };
 }
 export function getInfo() {
-  return axios.get<GetInfoRes>("/getInfo");
+  return axios.get<GetInfoRes>('/getInfo');
 }
 
 export interface CodeImgRes {
@@ -38,5 +38,5 @@ export interface CodeImgRes {
   img: string;
 }
 export function captchaImage() {
-  return axios.get<CodeImgRes>("/captchaImage");
+  return axios.get<CodeImgRes>('/captchaImage');
 }

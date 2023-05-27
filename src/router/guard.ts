@@ -1,10 +1,10 @@
-import type { Router } from "vue-router";
-import { getStorageData } from "@/utils/storage";
-import { useUserStore } from "@/store";
-import { ACCESS_TOKEN } from "@/store/mutation-types";
+import type { Router } from 'vue-router';
+import { getStorageData } from '@/utils/storage';
+import { useUserStore } from '@/store';
+import { ACCESS_TOKEN } from '@/store/mutation-types';
 
 const setupUserInfoGuard = (router: Router) => {
-  router.beforeEach(async (to, from, next) => {
+  router.beforeEach(async (to, _from, next) => {
     const userStore = useUserStore();
     const token = await getStorageData(ACCESS_TOKEN);
     if (token) {
@@ -21,7 +21,7 @@ const setupUserInfoGuard = (router: Router) => {
       }
     } else {
       const { auth } = to.meta;
-      if (auth) next("/login");
+      if (auth) next('/login');
       else next();
     }
   });

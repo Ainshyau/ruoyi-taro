@@ -1,11 +1,9 @@
-import { createApp } from "vue";
-import router from "./router";
-import pinia from "./store";
+import { createApp } from 'vue';
+import router from './router';
+import pinia from './store';
 
-import "./app.css";
+import './utils/interceptor';
 
-import "./utils/interceptor";
-
-const App = createApp({});
-App.use(router).use(pinia);
-export default App;
+const app = createApp({});
+app.use(router).use(pinia);
+export default app;
